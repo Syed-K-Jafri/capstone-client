@@ -18,7 +18,10 @@ class NavRight extends Component {
 
     async logout(e) {
         e.preventDefault();
-
+        await localStorage.removeItem('capstone-token');
+        await this.props.signOut();
+        await this.props.sideNavigation([]);
+        this.props.history.push('/login');
     }
 
     render() {
