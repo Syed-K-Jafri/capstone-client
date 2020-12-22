@@ -63,7 +63,7 @@ class SignUp1 extends React.Component {
         this.setState({ isLoading: true });
 
         try {
-            const response = axios.post(`${config.prod}/api/user/create`, 
+            const response = await axios.post(`${config.prod}/api/user/create`, 
                 {   
                     email: email.trim(), password: password,
                     lastName: lastName.trim(), firstName: firstName.trim(), role: 'user'

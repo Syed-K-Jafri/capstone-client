@@ -96,12 +96,6 @@ class SignUp1 extends React.Component {
                 <NotificationContainer/>
                 <div className="auth-wrapper">
                     <div className="auth-content">
-                        <div className="auth-bg">
-                            <span className="r"/>
-                            <span className="r s"/>
-                            <span className="r s"/>
-                            <span className="r"/>
-                        </div>
                         <div className="card">
                             <div className="card-body text-center">
                                 <fieldset disabled={this.state.isLoading} className={this.state.isLoading ? 'opacity-5' : ''}>
