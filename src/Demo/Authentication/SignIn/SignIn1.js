@@ -54,7 +54,7 @@ class SignUp1 extends React.Component {
         this.setState({ isLoading: true });
 
         try {
-            const result = axios.post(`${config.prod}/api/user/signin`, { email: email.trim(), password: password });
+            const result = await axios.post(`${config.prod}/api/user/signin`, { email: email.trim(), password: password });
             this.setState({ isLoading: false });
             await localStorage.setItem('capstone-token', result.data.token);
             await this.props.signIn(result.data.user);
